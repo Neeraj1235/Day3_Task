@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--For the given JSON iterate over all for loops (for, for in, for of, forEach)-->
+    <script>
+        var json = [{
+            "firstName": "Neeraj",
+            "lastName": "Kumar",
+            "email_id": "Justneeraj2016@gmail.com",
+            "phoneNo": 9634073727,
+            "age": 22
+        }];
+
+        // for loop
+        for (var i = 0; i < json.length; i++) {
+            var obj = json[i];
+
+            console.log(obj.firstName);
+            console.log(obj.lastName);
+            console.log(obj.email_id);
+            console.log(obj.phoneNo);
+            console.log(obj.age);
+
+        }
+
+        // for Each
+        json.forEach(function (obj) {
+            console.log(obj.firstName), console.log(obj.lastName)
+            console.log(obj.email_id), console.log(obj.phoneNo), console.log(obj.age)
+        });
+
+        // for In
+        for (var key in json) {
+            if (json.hasOwnProperty(key)) {
+                console.log(json[key].firstName);
+                console.log(json[key].lastName);
+                console.log(json[key].email_id);
+                console.log(json[key].phoneNo);
+                console.log(json[key].age);
+            }
+        }
+
+        // for Of
+        for (var obj of json) {
+            console.log(obj.firstName)
+            console.log(obj.lastName)
+            console.log(obj.email_id)
+            console.log(obj.phoneNo)
+            console.log(obj.age)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
